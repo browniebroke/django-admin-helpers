@@ -1,5 +1,11 @@
 # Changelog
 
+## v0.2.0 (2024-06-10)
+
+### Feature
+
+- Add link helpers (#1) ([`e837b5f`](https://github.com/browniebroke/django-admin-helpers/commit/e837b5f3b6e703f4f01c6c93a0f52030c4301f10))
+
 ## v0.1.0 (2024-06-10)
 
 ### Feature
