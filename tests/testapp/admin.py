@@ -1,5 +1,6 @@
 from django.contrib import admin
-from testapp.models import Author, Blog, Post
+
+from .models import Author, Blog, Post
 
 
 @admin.register(Blog)

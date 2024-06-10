@@ -19,5 +19,5 @@ INSTALLED_APPS = [
     "django.contrib.admin",
     "django.contrib.contenttypes",
     "django_admin_helpers",
-    "testapp",
+    "tests.testapp",
 ]

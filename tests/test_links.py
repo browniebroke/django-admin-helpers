@@ -1,5 +1,4 @@
 import pytest
-from testapp.models import Author, Blog, Post
 
 from django_admin_helpers.links import (
     admin_add_url,
@@ -9,6 +8,8 @@ from django_admin_helpers.links import (
     inline_button,
     link_tag,
 )
+
+from .testapp.models import Author, Blog, Post
 
 
 @pytest.mark.parametrize(
