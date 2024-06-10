@@ -81,6 +81,11 @@ def test_admin_link_tag(label, expected_str):
     assert str(actual_str) == expected_str
 
 
+def test_admin_link_tag_no_instance():
+    actual_str = admin_link_tag(None, "example")
+    assert str(actual_str) == ""
+
+
 @pytest.mark.parametrize(
     ("url", "label", "blank", "expected_str"),
     [
