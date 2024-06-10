@@ -21,8 +21,8 @@ SETTINGS_PREFIX = "ADMIN_HELPERS_"
 class AppSettings:
     """Access this instance as `.conf.app_settings`."""
 
-    ADMIN_HELPERS_ENABLED: bool = True
-    """Whether the app is enabled (dummy setting to demo usage)."""
+    ADMIN_HELPERS_URL_NAMESPACE: str = "admin"
+    """URL namespace for the admin app (defaults to 'admin')."""
 
     def __getattribute__(self, __name: str) -> Any:
         """

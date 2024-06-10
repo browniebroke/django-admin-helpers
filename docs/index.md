@@ -5,8 +5,9 @@
 :maxdepth: 2
 
 installation
-configuration
 usage
+reference
+configuration
 ```
 
 ```{toctree}
