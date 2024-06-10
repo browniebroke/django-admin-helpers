@@ -85,3 +85,5 @@ class PostAdmin(admin.ModelAdmin):
 ```
 
 You need to add the method, and it's pretty explicit what's happening and where the URL comes from.
+
+Ready to dive in? Check out the {ref}`next section <reference>` about the full API or {ref}`the configuration options <configuration>` available.
