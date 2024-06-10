@@ -1,0 +1,22 @@
+# Changes here will be overwritten by Copier
+_commit: 72dd0b1
+_src_path: gh:browniebroke/pypackage-template
+add_me_as_contributor: true
+copyright_year: '2024'
+django_app_shorthand: admin_helpers
+documentation: true
+email: oss@browniebroke.com
+full_name: Bruno Alla
+github_username: browniebroke
+has_cli: false
+initial_commit: true
+is_django_package: true
+open_source_license: MIT
+package_name: django_admin_helpers
+project_name: Django Admin Helpers
+project_short_description: A collections of helpers for the Django admin.
+project_slug: django-admin-helpers
+run_poetry_install: true
+setup_github: true
+setup_pre_commit: true
+
