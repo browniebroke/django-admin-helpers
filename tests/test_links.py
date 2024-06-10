@@ -27,6 +27,12 @@ def test_admin_list_url(model_class, expected_url):
     assert instance_url == model_url == expected_url
 
 
+def test_admin_list_url_with_setting(settings):
+    settings.ADMIN_HELPERS_URL_NAMESPACE = "admin"
+    url = admin_list_url(Blog)
+    assert url == "/admin/testapp/blog/"
+
+
 @pytest.mark.parametrize(
     ("model_class", "expected_url"),
     [
