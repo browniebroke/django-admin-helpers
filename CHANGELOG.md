@@ -1,5 +1,11 @@
 # Changelog
 
+## v1.0.0 (2024-06-24)
+
+### Breaking
+
+- Drop django &lt; 4.2 support (#11) ([`54c4143`](https://github.com/browniebroke/django-admin-helpers/commit/54c4143c1e1235446579fcf4751151d3193f1fb5))
+
 ## v0.2.0 (2024-06-10)
 
 ### Feature
