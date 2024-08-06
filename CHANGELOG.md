@@ -1,5 +1,11 @@
 # Changelog
 
+## v1.1.0 (2024-08-06)
+
+### Feature
+
+- Add django 5.1 support (#50) ([`ef6e5af`](https://github.com/browniebroke/django-admin-helpers/commit/ef6e5aff1ccc556bbc1b973aaa7ff37611afe4dd))
+
 ## v1.0.0 (2024-06-24)
 
 ### Breaking
