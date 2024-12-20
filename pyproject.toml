@@ -1,52 +1,55 @@
 [build-system]
-build-backend = "poetry.core.masonry.api"
-requires = [ "poetry-core>=1" ]
+build-backend = "setuptools.build_meta"
+requires = [ "setuptools" ]
 
-[tool.poetry]
+[project]
 name = "django-admin-helpers"
 version = "1.2.0"
 description = "A collections of helpers for the Django admin."
-authors = [ "Bruno Alla <oss@browniebroke.com>" ]
-license = "MIT"
 readme = "README.md"
-repository = "https://github.com/browniebroke/django-admin-helpers"
-documentation = "https://django-admin-helpers.readthedocs.io"
+license = { text = "MIT" }
+authors = [
+  { name = "Bruno Alla", email = "oss@browniebroke.com" },
+]
+requires-python = ">=3.9"
 classifiers = [
   "Development Status :: 2 - Pre-Alpha",
-  "Intended Audience :: Developers",
-  "Natural Language :: English",
-  "Operating System :: OS Independent",
   "Framework :: Django",
   "Framework :: Django :: 4.2",
   "Framework :: Django :: 5.0",
   "Framework :: Django :: 5.1",
+  "Intended Audience :: Developers",
+  "Natural Language :: English",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
   "Topic :: Software Development :: Libraries",
 ]
-packages = [
-  { include = "django_admin_helpers", from = "src" },
+
+dependencies = [
+  "django>=4.2",
 ]
+urls."Bug Tracker" = "https://github.com/browniebroke/django-admin-helpers/issues"
+urls.Changelog = "https://github.com/browniebroke/django-admin-helpers/blob/main/CHANGELOG.md"
+urls.documentation = "https://django-admin-helpers.readthedocs.io"
+urls.repository = "https://github.com/browniebroke/django-admin-helpers"
 
-[tool.poetry.urls]
-"Bug Tracker" = "https://github.com/browniebroke/django-admin-helpers/issues"
-"Changelog" = "https://github.com/browniebroke/django-admin-helpers/blob/main/CHANGELOG.md"
-
-[tool.poetry.dependencies]
-python = "^3.9"
-django = ">=4.2"
-
-[tool.poetry.group.dev.dependencies]
-pytest = "^8.0.0"
-pytest-cov = "^6.0.0"
-pytest-django = "^4.5"
-
-[tool.poetry.group.docs]
-optional = true
-
-[tool.poetry.group.docs.dependencies]
-myst-parser = { version = ">=0.16", python = ">=3.11" }
-sphinx = { version = ">=4.0", python = ">=3.11" }
-furo = { version = ">=2023.5.20", python = ">=3.11" }
-sphinx-autobuild = { version = ">=2024.0.0", python = ">=3.11" }
+[dependency-groups]
+dev = [
+  "pytest>=8,<9",
+  "pytest-cov>=6,<7",
+  "pytest-django>=4.5,<5",
+]
+docs = [
+  "furo>=2023.5.20; python_version>='3.11'",
+  "myst-parser>=0.16; python_version>='3.11'",
+  "sphinx>=4; python_version>='3.11'",
+  "sphinx-autobuild>=2024; python_version>='3.11'",
+]
 
 [tool.ruff]
 target-version = "py39"
@@ -133,12 +136,17 @@ module = "docs.*"
 ignore_errors = true
 
 [tool.semantic_release]
-version_toml = [ "pyproject.toml:tool.poetry.version" ]
+version_toml = [ "pyproject.toml:project.version" ]
 version_variables = [
   "src/django_admin_helpers/__init__.py:__version__",
   "docs/conf.py:release",
 ]
-build_command = "pip install poetry && poetry build"
+build_command = """
+pip install uv
+uv lock
+git add uv.lock
+uv build
+"""
 
 [tool.semantic_release.changelog]
 exclude_commit_patterns = [
