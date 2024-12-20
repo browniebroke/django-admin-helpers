@@ -1,5 +1,11 @@
 # Changelog
 
+## v1.3.0 (2024-12-20)
+
+### Features
+
+- Migrate packaging to uv (#147) ([`2f36b73`](https://github.com/browniebroke/django-admin-helpers/commit/2f36b73fc05c60d8b026e4c86a69633635c74953))
+
 ## v1.2.0 (2024-10-31)
 
 ### Features
@@ -14,7 +20,7 @@
 
 ## v1.0.0 (2024-06-24)
 
-### Breaking
+### Features
 
 - Drop django < 4.2 support (#11) ([`54c4143`](https://github.com/browniebroke/django-admin-helpers/commit/54c4143c1e1235446579fcf4751151d3193f1fb5))
 
