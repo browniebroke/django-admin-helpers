@@ -1,5 +1,11 @@
 # Changelog
 
+## v1.4.0 (2025-02-18)
+
+### Features
+
+- Add support for django 5.2 (#203) ([`27820f5`](https://github.com/browniebroke/django-admin-helpers/commit/27820f58c94a0165004adf3f6b2b640ead949f34))
+
 ## v1.3.0 (2024-12-20)
 
 ### Features
