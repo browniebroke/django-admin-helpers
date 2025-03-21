@@ -53,7 +53,7 @@ def admin_link_tag(
 ) -> SafeString:
     """Make a link to a model instance in the admin."""
     if not instance:
-        return mark_safe("")  # noqa: S308
+        return mark_safe("")
     label = label or str(instance)
     return link_tag(url=admin_url(instance), label=label)
 
