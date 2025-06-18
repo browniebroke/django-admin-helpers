@@ -41,8 +41,8 @@ urls.repository = "https://github.com/browniebroke/django-admin-helpers"
 
 [dependency-groups]
 dev = [
+  "coverage",
   "pytest>=8,<9",
-  "pytest-cov>=6,<7",
   "pytest-django>=4.5,<5",
 ]
 docs = [
@@ -92,15 +92,22 @@ lint.isort.known-first-party = [ "django_admin_helpers", "tests" ]
 addopts = """\
     -v
     -Wdefault
-    --cov=django_admin_helpers
-    --cov-report=term
-    --cov-report=xml
     --ds=tests.settings
     """
 pythonpath = [ "src" ]
 
 [tool.coverage.run]
 branch = true
+parallel = true
+source = [
+  "django_admin_helpers",
+]
+
+[tool.coverage.paths]
+source = [
+  "src",
+  ".tox/**/site-packages",
+]
 
 [tool.coverage.report]
 exclude_lines = [
