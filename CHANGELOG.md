@@ -1,40 +1,46 @@
 # Changelog
 
+## v1.4.1 (2025-06-23)
+
+### Bug fixes
+
+- Update type hint to accept translated strings as label ([`fc4481f`](https://github.com/browniebroke/django-admin-helpers/commit/fc4481f3ede72bde3802f916ff3ebc1495425f0a))
+
 ## v1.4.0 (2025-02-18)
 
 ### Features
 
-- Add support for django 5.2 (#203) ([`27820f5`](https://github.com/browniebroke/django-admin-helpers/commit/27820f58c94a0165004adf3f6b2b640ead949f34))
+- Add support for django 5.2 ([`27820f5`](https://github.com/browniebroke/django-admin-helpers/commit/27820f58c94a0165004adf3f6b2b640ead949f34))
 
 ## v1.3.0 (2024-12-20)
 
 ### Features
 
-- Migrate packaging to uv (#147) ([`2f36b73`](https://github.com/browniebroke/django-admin-helpers/commit/2f36b73fc05c60d8b026e4c86a69633635c74953))
+- Migrate packaging to uv ([`2f36b73`](https://github.com/browniebroke/django-admin-helpers/commit/2f36b73fc05c60d8b026e4c86a69633635c74953))
 
 ## v1.2.0 (2024-10-31)
 
 ### Features
 
-- Drop support for python 3.8 (#112) ([`053ac2c`](https://github.com/browniebroke/django-admin-helpers/commit/053ac2cd21d554c8a53c56f09d187d072a82c95a))
+- Drop support for python 3.8 ([`053ac2c`](https://github.com/browniebroke/django-admin-helpers/commit/053ac2cd21d554c8a53c56f09d187d072a82c95a))
 
 ## v1.1.0 (2024-08-06)
 
 ### Features
 
-- Add django 5.1 support (#50) ([`ef6e5af`](https://github.com/browniebroke/django-admin-helpers/commit/ef6e5aff1ccc556bbc1b973aaa7ff37611afe4dd))
+- Add django 5.1 support ([`ef6e5af`](https://github.com/browniebroke/django-admin-helpers/commit/ef6e5aff1ccc556bbc1b973aaa7ff37611afe4dd))
 
 ## v1.0.0 (2024-06-24)
 
 ### Features
 
-- Drop django < 4.2 support (#11) ([`54c4143`](https://github.com/browniebroke/django-admin-helpers/commit/54c4143c1e1235446579fcf4751151d3193f1fb5))
+- Drop django < 4.2 support ([`54c4143`](https://github.com/browniebroke/django-admin-helpers/commit/54c4143c1e1235446579fcf4751151d3193f1fb5))
 
 ## v0.2.0 (2024-06-10)
 
 ### Features
 
-- Add link helpers (#1) ([`e837b5f`](https://github.com/browniebroke/django-admin-helpers/commit/e837b5f3b6e703f4f01c6c93a0f52030c4301f10))
+- Add link helpers ([`e837b5f`](https://github.com/browniebroke/django-admin-helpers/commit/e837b5f3b6e703f4f01c6c93a0f52030c4301f10))
 
 ## v0.1.0 (2024-06-10)
 
