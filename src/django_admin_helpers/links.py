@@ -49,7 +49,7 @@ def admin_url(instance: Model) -> str:
 
 def admin_link_tag(
     instance: Model | None,
-    label: str | None = None,
+    label: StrOrPromise | None = None,
 ) -> SafeString:
     """Make a link to a model instance in the admin."""
     if not instance:
