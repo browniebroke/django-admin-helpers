@@ -75,12 +75,17 @@ def link_tag(
 
 INLINE_BUTTON_HTML = """
 <a href="{url}" class="button"
-   style="margin-top: 1rem; margin-bottom: 1rem; display: inline-block;">
+   style="margin-top: {mt}; margin-bottom: {mb}; display: inline-block;">
     {label}
 </a>
 """
 
 
-def inline_button(url: str, label: StrOrPromise) -> str:
+def inline_button(
+    url: str,
+    label: StrOrPromise,
+    mt: str = "0",
+    mb: str = "1rem",
+) -> str:
     """Build a button to be inlined in the admin."""
-    return format_html(INLINE_BUTTON_HTML, url=url, label=label)
+    return format_html(INLINE_BUTTON_HTML, url=url, label=label, mt=mt, mb=mb)

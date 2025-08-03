@@ -108,12 +108,20 @@ def test_link_tag(url, label, blank, expected_str):
     assert str(actual_str) == expected_str
 
 
-def test_inline_button():
-    actual_str = inline_button("/something/", "Link")
+@pytest.mark.parametrize(
+    ("extra_kwargs", "expected_styles"),
+    [
+        ({}, "margin-top: 0; margin-bottom: 1rem"),
+        ({"mt": "0", "mb": "2rem"}, "margin-top: 0; margin-bottom: 2rem"),
+        ({"mt": "1rem", "mb": "0"}, "margin-top: 1rem; margin-bottom: 0"),
+    ],
+)
+def test_inline_button(extra_kwargs, expected_styles):
+    actual_str = inline_button("/something/", "Link", **extra_kwargs)
     assert str(actual_str) == (
         "\n"
         '<a href="/something/" class="button"\n'
-        '   style="margin-top: 1rem; margin-bottom: 1rem; display: inline-block;">\n'
+        f'   style="{expected_styles}; display: inline-block;">\n'
         "    Link\n"
         "</a>\n"
     )
