@@ -1,5 +1,11 @@
 # Changelog
 
+## v1.5.0 (2025-08-03)
+
+### Features
+
+- Add the ability to customise margins on inline_button ([`bd1bef7`](https://github.com/browniebroke/django-admin-helpers/commit/bd1bef787a75bd082158bf0bbc6eccd10229bc80))
+
 ## v1.4.1 (2025-06-23)
 
 ### Bug fixes

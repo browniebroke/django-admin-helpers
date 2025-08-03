@@ -7,7 +7,7 @@
 project = "Django Admin Helpers"
 copyright = "2024, Bruno Alla"
 author = "Bruno Alla"
-release = "1.4.1"
+release = "1.5.0"
 
 # General configuration
 extensions = [
