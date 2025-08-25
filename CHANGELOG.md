@@ -1,5 +1,11 @@
 # Changelog
 
+## v1.5.1 (2025-08-25)
+
+### Bug fixes
+
+- Use spdx expression for license ([`e985c76`](https://github.com/browniebroke/django-admin-helpers/commit/e985c76546ec916a23968bac15756dd3b2732806))
+
 ## v1.5.0 (2025-08-03)
 
 ### Features
