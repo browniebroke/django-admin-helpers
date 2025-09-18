@@ -10,8 +10,9 @@ from django.utils.safestring import SafeString, mark_safe
 from .conf import app_settings
 
 if TYPE_CHECKING:
+    from typing import TypeAlias
+
     from django.utils.functional import Promise
-    from typing_extensions import TypeAlias
 
     StrOrPromise: TypeAlias = str | Promise
 
