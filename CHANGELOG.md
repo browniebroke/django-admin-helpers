@@ -1,5 +1,12 @@
 # Changelog
 
+## v1.6.0 (2025-09-18)
+
+### Features
+
+- Add support for python 3.14 ([`b9e49f4`](https://github.com/browniebroke/django-admin-helpers/commit/b9e49f49af60e02dd95b5758daef2393043c0364))
+- Drop support for python 3.9 ([`8c7d107`](https://github.com/browniebroke/django-admin-helpers/commit/8c7d10719c8ff1812e4852c6e50eeed5e58ae0b1))
+
 ## v1.5.1 (2025-08-25)
 
 ### Bug fixes
