@@ -1,4 +1,6 @@
-# Welcome to Django Admin Helpers documentation!
+```{include} ../README.md
+
+```
 
 ```{toctree}
 :caption: Installation & Usage
@@ -16,8 +18,4 @@ configuration
 
 changelog
 contributing
-```
-
-```{include} ../README.md
-
 ```
