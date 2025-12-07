@@ -1,5 +1,15 @@
 # Changelog
 
+## v1.7.0 (2025-12-07)
+
+### Features
+
+- Add support for django 6.0 ([`2f292cb`](https://github.com/browniebroke/django-admin-helpers/commit/2f292cbe6a1a8f3b16585cbc7bd6d9cbe96d71e8))
+
+### Documentation
+
+- Move toc lower on index page ([`cad5e50`](https://github.com/browniebroke/django-admin-helpers/commit/cad5e50df08f6d12ea861def6708ffa96ebef96c))
+
 ## v1.6.0 (2025-09-18)
 
 ### Features

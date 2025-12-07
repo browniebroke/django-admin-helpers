@@ -406,7 +406,7 @@ wheels = [
 
 [[package]]
 name = "django-admin-helpers"
-version = "1.6.0"
+version = "1.7.0"
 source = { editable = "." }
 dependencies = [
     { name = "django", version = "4.2.27", source = { registry = "https://pypi.org/simple" }, marker = "extra == 'group-20-django-admin-helpers-django42' or (extra == 'group-20-django-admin-helpers-django50' and extra == 'group-20-django-admin-helpers-django51') or (extra == 'group-20-django-admin-helpers-django50' and extra == 'group-20-django-admin-helpers-django52') or (extra == 'group-20-django-admin-helpers-django50' and extra == 'group-20-django-admin-helpers-django60') or (extra == 'group-20-django-admin-helpers-django51' and extra == 'group-20-django-admin-helpers-django52') or (extra == 'group-20-django-admin-helpers-django51' and extra == 'group-20-django-admin-helpers-django60') or (extra == 'group-20-django-admin-helpers-django52' and extra == 'group-20-django-admin-helpers-django60')" },
