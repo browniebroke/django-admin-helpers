@@ -108,7 +108,7 @@ max_supported_python = "3.14"
 
 [tool.pytest]
 minversion = "9.0"
-addopts = [ "-v", "-Wonce", "--cov=django_admin_helpers" ]
+addopts = [ "-v", "-Wonce" ]
 pythonpath = [ "src" ]
 DJANGO_SETTINGS_MODULE = "tests.settings"
 
