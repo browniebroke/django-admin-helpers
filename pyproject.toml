@@ -107,26 +107,26 @@ lint.isort.known-first-party = [ "django_admin_helpers", "tests" ]
 max_supported_python = "3.14"
 
 [tool.mypy]
-check_untyped_defs = true
-disallow_any_generics = true
-disallow_incomplete_defs = true
-disallow_untyped_defs = true
 mypy_path = "src/"
-no_implicit_optional = true
-show_error_codes = true
-warn_unreachable = true
-warn_unused_ignores = true
 exclude = [
   "docs/.*",
   "setup.py",
 ]
+disallow_any_generics = true
+disallow_untyped_defs = true
+disallow_incomplete_defs = true
+check_untyped_defs = true
+warn_unused_ignores = true
+warn_unreachable = true
 overrides = [ { module = "tests.*", allow_untyped_defs = true }, { module = "docs.*", ignore_errors = true } ]
+no_implicit_optional = true
+show_error_codes = true
 
 [tool.pytest]
-minversion = "9.0"
 addopts = [ "-v", "-Wonce" ]
-pythonpath = [ "src" ]
 DJANGO_SETTINGS_MODULE = "tests.settings"
+minversion = "9.0"
+pythonpath = [ "src" ]
 
 [tool.coverage]
 run.branch = true
@@ -147,11 +147,11 @@ report.exclude_lines = [
 ]
 
 [tool.semantic_release]
-version_toml = [ "pyproject.toml:project.version" ]
 version_variables = [
-  "src/django_admin_helpers/__init__.py:__version__",
   "docs/conf.py:release",
+  "src/django_admin_helpers/__init__.py:__version__",
 ]
+version_toml = [ "pyproject.toml:project.version" ]
 build_command = """
 pip install uv
 uv lock
@@ -161,9 +161,9 @@ uv build
 branches.main.match = "main"
 branches.noop.match = "(?!main$)"
 branches.noop.prerelease = true
+changelog.environment.keep_trailing_newline = true
 changelog.exclude_commit_patterns = [
   "chore.*",
   "ci.*",
   "Merge pull request .*",
 ]
-changelog.environment.keep_trailing_newline = true
