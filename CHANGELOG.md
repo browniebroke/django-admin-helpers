@@ -1,5 +1,12 @@
 # Changelog
 
+## v2.0.0 (2026-07-26)
+
+### Features
+
+- Add django 6.1 support ([`5304583`](https://github.com/browniebroke/django-admin-helpers/commit/53045838a9e69c7db1f5aa2b116af98dd968f6fe))
+- Drop django < 5.2 support ([`ca3aec1`](https://github.com/browniebroke/django-admin-helpers/commit/ca3aec1eedfa2f1b7ab23f0bd6d97b34435a9c1b))
+
 ## v1.7.0 (2025-12-07)
 
 ### Features

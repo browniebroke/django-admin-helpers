@@ -300,9 +300,9 @@ name = "django"
 version = "5.2.16"
 source = { registry = "https://pypi.org/simple" }
 resolution-markers = [
+    "python_full_version >= '3.12'",
     "python_full_version == '3.11.*'",
     "python_full_version < '3.11'",
-    "python_full_version >= '3.12'",
 ]
 dependencies = [
     { name = "asgiref", marker = "python_full_version < '3.12' or extra == 'group-20-django-admin-helpers-django52' or (extra == 'group-20-django-admin-helpers-django60' and extra == 'group-20-django-admin-helpers-django61')" },
@@ -350,7 +350,7 @@ wheels = [
 
 [[package]]
 name = "django-admin-helpers"
-version = "1.7.0"
+version = "2.0.0"
 source = { editable = "." }
 dependencies = [
     { name = "django", version = "5.2.16", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.12' or extra == 'group-20-django-admin-helpers-django52' or (extra == 'group-20-django-admin-helpers-django60' and extra == 'group-20-django-admin-helpers-django61')" },
