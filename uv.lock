@@ -299,9 +299,9 @@ name = "django"
 version = "5.2.16"
 source = { registry = "https://pypi.org/simple" }
 resolution-markers = [
+    "python_full_version >= '3.12'",
     "python_full_version == '3.11.*'",
     "python_full_version < '3.11'",
-    "python_full_version >= '3.12'",
 ]
 dependencies = [
     { name = "asgiref", marker = "python_full_version < '3.12' or extra == 'group-20-django-admin-helpers-django52'" },
@@ -360,7 +360,7 @@ docs = [
 ]
 
 [package.metadata]
-requires-dist = [{ name = "django", specifier = ">=4.2" }]
+requires-dist = [{ name = "django", specifier = ">=5.2" }]
 
 [package.metadata.requires-dev]
 dev = [
