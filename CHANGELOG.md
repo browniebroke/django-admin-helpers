@@ -1,5 +1,11 @@
 # Changelog
 
+## v2.1.0 (2026-08-07)
+
+### Features
+
+- Add support for python 3.15 ([`5a05f0f`](https://github.com/browniebroke/django-admin-helpers/commit/5a05f0fe12a8802d06ad86f8607f745d25847ac1))
+
 ## v2.0.0 (2026-07-26)
 
 ### Features
