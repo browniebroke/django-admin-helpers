@@ -86,4 +86,31 @@ class PostAdmin(admin.ModelAdmin):
 
 You need to add the method, and it's pretty explicit what's happening and where the URL comes from.
 
+## Deleting files along with model instances
+
+When a model has a `FileField` or `ImageField`, Django doesn't remove the underlying files from storage when instances are deleted: the records disappear from the database, but the files stay behind. The `FilesDeleteMixin` hooks into the admin deletion flow to delete the files from storage as well.
+
+Let's say the `Author` model has a picture:
+
+```python
+class Author(models.Model):
+    full_name = models.CharField(max_length=50)
+    picture = models.ImageField(upload_to="authors")
+```
+
+Add the mixin to the model admin and list the file fields to clean up in `file_field_names`:
+
+```python
+from django_admin_helpers.mixins import FilesDeleteMixin
+
+
+@admin.register(Author)
+class AuthorAdmin(FilesDeleteMixin, admin.ModelAdmin):
+    file_field_names = ["picture"]
+```
+
+Now deleting an author, either from their admin change page or via the bulk delete action in the change list, also deletes their picture from storage. If a file can't be deleted for any reason, the error is logged and the record is deleted from the database anyway.
+
+Note that this only applies to deletions performed through the admin: deleting instances from other code paths (views, shell, ...) still leaves the files in storage.
+
 Ready to dive in? Check out the {ref}`next section <reference>` about the full API or {ref}`the configuration options <configuration>` available.
