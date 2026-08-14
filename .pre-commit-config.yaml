@@ -3,10 +3,6 @@
 exclude: "CHANGELOG.md|.copier-answers.yml|.all-contributorsrc"
 default_stages: [pre-commit]
 
-ci:
-  autofix_commit_msg: "chore(pre-commit.ci): auto fixes"
-  autoupdate_commit_msg: "chore(pre-commit.ci): pre-commit autoupdate"
-
 repos:
   - repo: https://github.com/commitizen-tools/commitizen
     rev: v4.17.0
@@ -50,8 +46,11 @@ repos:
     rev: v2.4.3
     hooks:
       - id: codespell
-  - repo: https://github.com/pre-commit/mirrors-mypy
-    rev: v2.3.0
+  - repo: local
     hooks:
-      - id: mypy
-        additional_dependencies: []
+      - id: local-mypy
+        name: mypy check
+        entry: uv run mypy src
+        require_serial: true
+        language: system
+        pass_filenames: false

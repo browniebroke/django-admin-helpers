@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from typing import TYPE_CHECKING
+from typing import TYPE_CHECKING, cast
 
 from django.db.models import Model
 from django.urls import reverse
@@ -19,7 +19,8 @@ if TYPE_CHECKING:
 
 def get_app_model_names(model: Model | type[Model]) -> tuple[str, str]:
     """Get app label and model name from private meta attribute."""
-    return model._meta.app_label, model._meta.model_name
+    # model_name is only None for classes not going through ModelBase.__new__
+    return model._meta.app_label, cast("str", model._meta.model_name)
 
 
 def admin_list_url(model: type[Model] | Model) -> str:
