@@ -1,5 +1,11 @@
 # Changelog
 
+## v2.2.0 (2026-08-14)
+
+### Features
+
+- Add admin mixin to delete files as instances are deleted ([`5d3b17e`](https://github.com/browniebroke/django-admin-helpers/commit/5d3b17e2db0870f436aebb25d9a37d624c1cd7c8))
+
 ## v2.1.0 (2026-08-07)
 
 ### Features

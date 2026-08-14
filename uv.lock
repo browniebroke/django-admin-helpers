@@ -448,7 +448,7 @@ wheels = [
 
 [[package]]
 name = "django-admin-helpers"
-version = "2.1.0"
+version = "2.2.0"
 source = { editable = "." }
 dependencies = [
     { name = "django", version = "5.2.17", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.12' or extra == 'group-20-django-admin-helpers-django52' or (extra == 'group-20-django-admin-helpers-django60' and extra == 'group-20-django-admin-helpers-django61')" },
@@ -489,7 +489,7 @@ requires-dist = [{ name = "django", specifier = ">=5.2" }]
 dev = [
     { name = "coverage" },
     { name = "django-stubs", specifier = ">=6.0.9" },
-    { name = "mypy", specifier = ">=2.3.0" },
+    { name = "mypy", specifier = ">=2.3" },
     { name = "pytest", specifier = ">=9,<10" },
     { name = "pytest-django", specifier = ">=4.5,<5" },
 ]
