@@ -41,6 +41,8 @@ urls.repository = "https://github.com/browniebroke/django-admin-helpers"
 [dependency-groups]
 dev = [
   "coverage",
+  "django-stubs>=6.0.9",
+  "mypy>=2.3.0",
   "pytest>=9,<10",
   "pytest-django>=4.5,<5",
 ]
@@ -103,6 +105,7 @@ max_supported_python = "3.15"
 
 [tool.mypy]
 mypy_path = "src/"
+plugins = [ "mypy_django_plugin.main" ]
 exclude = [
   "docs/.*",
   "setup.py",
@@ -116,6 +119,9 @@ warn_unreachable = true
 overrides = [ { module = "tests.*", allow_untyped_defs = true }, { module = "docs.*", ignore_errors = true } ]
 no_implicit_optional = true
 show_error_codes = true
+
+[tool.django-stubs]
+django_settings_module = "tests.settings"
 
 [tool.pytest]
 addopts = [ "-v", "-Wonce" ]
