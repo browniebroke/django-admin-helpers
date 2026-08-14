@@ -12,6 +12,7 @@ class Blog(models.Model):
 class Author(models.Model):
     full_name = models.CharField(max_length=50)
     picture = models.ImageField(upload_to="authors")
+    attachment = models.FileField(upload_to="attachments", blank=True)
 
     def __str__(self):  # noqa: D105
         return self.full_name

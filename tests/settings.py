@@ -10,6 +10,12 @@ DATABASES = {
     },
 }
 
+STORAGES = {
+    "default": {
+        "BACKEND": "django.core.files.storage.InMemoryStorage",
+    },
+}
+
 USE_TZ = True
 TIME_ZONE = "UTC"
 ROOT_URLCONF = "tests.urls"
