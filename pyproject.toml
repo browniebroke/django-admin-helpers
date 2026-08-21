@@ -130,11 +130,11 @@ minversion = "9.0"
 pythonpath = [ "src" ]
 
 [tool.coverage]
-run.branch = true
-run.parallel = true
 run.source = [
   "django_admin_helpers",
 ]
+run.branch = true
+run.parallel = true
 paths.source = [
   "src",
   ".tox/**/site-packages",
