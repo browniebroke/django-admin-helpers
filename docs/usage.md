@@ -59,11 +59,7 @@ class PostAdmin(admin.ModelAdmin):
         app_label = author._meta.app_label
         model_name = author._meta.model_name
         url = reverse(f"admin:{app_label}_{model_name}_change")
-        return format_html(
-             '<a href="{url}">{label}</a>',
-            url=url,
-            label=str(author)
-        )
+        return format_html('<a href="{url}">{label}</a>', url=url, label=str(author))
 ```
 
 This quite a bit of boilerplate! You could simplify it and hardcode some pieces, but you may trade-off some robustness.
