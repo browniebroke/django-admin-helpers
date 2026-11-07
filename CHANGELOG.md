@@ -1,5 +1,11 @@
 # Changelog
 
+## v3.0.0 (2026-11-07)
+
+### Features
+
+- Drop support for python 3.10 ([`5bdd214`](https://github.com/browniebroke/django-admin-helpers/commit/5bdd214e40b16277ae822faced17c0c8587403a0))
+
 ## v2.2.0 (2026-08-14)
 
 ### Features
